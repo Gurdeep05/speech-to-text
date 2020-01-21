@@ -12,4 +12,6 @@ with gd.Microphone() as source:
 
     except:
         print('Sorry could not recognize your voice !')
-        
+with open("speech.wav", "wb") as f:
+    f.write(audio.get_wav_data())
+       
